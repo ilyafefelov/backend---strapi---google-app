@@ -1,0 +1,17 @@
+runtime: nodejs10
+
+instance_class: F2
+
+env_variables:
+  # HOST: '0.0.0.0'
+  NODE_ENV: 'production'
+  DATABASE_HOST: 'cluster0-shard-00-01-hxdra.mongodb.net'
+  DATABASE_SRV: false
+  DATABASE_PORT: 27017
+  DATABASE_NAME: 'strapi'
+  DATABASE_USERNAME: 'strapi'
+  DATABASE_PASSWORD: 'Zolototo'
+
+
+# beta_settings:
+#   cloud_sql_instances: '<instance_identifier>'
