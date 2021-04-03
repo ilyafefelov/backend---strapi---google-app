@@ -11,7 +11,9 @@ env_variables:
   DATABASE_NAME: 'strapi'
   DATABASE_USERNAME: 'strapi'
   DATABASE_PASSWORD: 'Zolototo'
-
+  CLOUDINARY_NAME: 'fulliron'
+  CLOUDINARY_KEY: '154768473484141'
+  CLOUDINARY_SECRET: 'QFQCms2epeYTdu8WPjgaTbnrGMU'
 
 # beta_settings:
 #   cloud_sql_instances: '<instance_identifier>'
