@@ -1,19 +1,18 @@
 {
   "paths": {
-    "/print-products": {
+    "/locations": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find all the locations's records",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve locations document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Locations"
                   }
                 }
               }
@@ -52,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "parameters": [
           {
@@ -195,18 +194,14 @@
       },
       "post": {
         "deprecated": false,
-        "description": "Create a new record",
+        "description": "Create a new locations record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve locations document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Locations"
                 }
               }
             }
@@ -244,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "requestBody": {
           "description": "",
@@ -252,26 +247,26 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPrint-product"
+                "$ref": "#/components/schemas/NewLocations"
               }
             }
           }
         }
       }
     },
-    "/print-products/count": {
+    "/locations/count": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Retrieve the numver of locations documents",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve locations document(s)",
             "content": {
               "application/json": {
                 "schema": {
                   "properties": {
-                    "foo": {
-                      "type": "string"
+                    "count": {
+                      "type": "integer"
                     }
                   }
                 }
@@ -311,26 +306,22 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "parameters": []
       }
     },
-    "/print-products/{id}": {
+    "/locations/{id}": {
       "get": {
         "deprecated": false,
-        "description": "",
+        "description": "Find one locations record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve locations document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Locations"
                 }
               }
             }
@@ -368,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "parameters": [
           {
@@ -385,18 +376,14 @@
       },
       "put": {
         "deprecated": false,
-        "description": "Update a record",
+        "description": "Update a single locations record",
         "responses": {
           "200": {
-            "description": "response",
+            "description": "Retrieve locations document(s)",
             "content": {
               "application/json": {
                 "schema": {
-                  "properties": {
-                    "foo": {
-                      "type": "string"
-                    }
-                  }
+                  "$ref": "#/components/schemas/Locations"
                 }
               }
             }
@@ -434,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "requestBody": {
           "description": "",
@@ -442,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewPrint-product"
+                "$ref": "#/components/schemas/NewLocations"
               }
             }
           }
@@ -462,10 +449,10 @@
       },
       "delete": {
         "deprecated": false,
-        "description": "Delete a record",
+        "description": "Delete a single locations record",
         "responses": {
           "200": {
-            "description": "deletes a single record based on the ID supplied",
+            "description": "deletes a single locations based on the ID supplied",
             "content": {
               "application/json": {
                 "schema": {
@@ -508,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Print-product"
+          "Locations"
         ],
         "parameters": [
           {
@@ -527,172 +514,15 @@
   },
   "components": {
     "schemas": {
-      "Print-product": {
+      "Locations": {
         "required": [
-          "id",
-          "name",
-          "material",
-          "inventory",
-          "pictures"
+          "id"
         ],
         "properties": {
           "id": {
             "type": "string"
           },
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "material": {
-            "type": "string",
-            "default": "textile",
-            "enum": [
-              "textile",
-              "paper",
-              "plastic"
-            ]
-          },
-          "inventory": {
-            "type": "integer",
-            "default": "1"
-          },
-          "pictures": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "hash",
-                "mime",
-                "size",
-                "url",
-                "provider"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "alternativeText": {
-                  "type": "string"
-                },
-                "caption": {
-                  "type": "string"
-                },
-                "width": {
-                  "type": "integer"
-                },
-                "height": {
-                  "type": "integer"
-                },
-                "formats": {
-                  "type": "object"
-                },
-                "hash": {
-                  "type": "string"
-                },
-                "ext": {
-                  "type": "string"
-                },
-                "mime": {
-                  "type": "string"
-                },
-                "size": {
-                  "type": "number"
-                },
-                "url": {
-                  "type": "string"
-                },
-                "previewUrl": {
-                  "type": "string"
-                },
-                "provider": {
-                  "type": "string"
-                },
-                "provider_metadata": {
-                  "type": "object"
-                },
-                "related": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "Designer": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id",
-                "name",
-                "material",
-                "inventory",
-                "pictures"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "description": {
-                  "type": "string"
-                },
-                "material": {
-                  "type": "string",
-                  "enum": [
-                    "textile",
-                    "paper",
-                    "plastic"
-                  ]
-                },
-                "inventory": {
-                  "type": "integer"
-                },
-                "pictures": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "Designer": {
-                  "type": "string"
-                },
-                "localizations": {
-                  "type": "array",
-                  "items": {
-                    "type": "string"
-                  }
-                },
-                "locale": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "locale": {
+          "text": {
             "type": "string"
           },
           "published_at": {
@@ -701,42 +531,9 @@
           }
         }
       },
-      "NewPrint-product": {
-        "required": [
-          "name",
-          "material",
-          "inventory"
-        ],
+      "NewLocations": {
         "properties": {
-          "name": {
-            "type": "string"
-          },
-          "description": {
-            "type": "string"
-          },
-          "material": {
-            "type": "string",
-            "default": "textile",
-            "enum": [
-              "textile",
-              "paper",
-              "plastic"
-            ]
-          },
-          "inventory": {
-            "type": "integer",
-            "default": "1"
-          },
-          "Designer": {
-            "type": "string"
-          },
-          "localizations": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "locale": {
+          "text": {
             "type": "string"
           },
           "published_at": {
@@ -753,5 +550,9 @@
       }
     }
   },
-  "tags": []
+  "tags": [
+    {
+      "name": "Locations"
+    }
+  ]
 }
