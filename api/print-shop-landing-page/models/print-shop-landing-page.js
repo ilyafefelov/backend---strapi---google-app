@@ -5,4 +5,27 @@
  * to customize this model
  */
 
-module.exports = {};
+module.exports = {lifecycles: {
+  afterCreate: async entry => {
+    axios
+      .post(strapi.config.get('server.staticWebsiteBuildURL'), {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+  afterUpdate: async entry => {
+    // console.log("entry update",strapi.config.currentEnvironment, strapi.config.get('server.staticWebsiteBuildURL'))
+    axios
+      .post(strapi.config.get('server.staticWebsiteBuildURL'), {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+  afterDestroy: async entry => {
+    axios
+      .post(strapi.config.get('server.staticWebsiteBuildURL'), {})
+      .catch(() => {
+        // Ignore
+      });
+  },
+}};
