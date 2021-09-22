@@ -9,7 +9,7 @@ module.exports = ({ env }) => ({
     },
     actionOptions: {
       upload: {
-        folder: 'printshop'
+        folder: 'strapi'
       },
       delete: {},
     },

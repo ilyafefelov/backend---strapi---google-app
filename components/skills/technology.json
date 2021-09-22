@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_skills_technology_s",
+  "info": {
+    "name": "technology ",
+    "icon": "code",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "iconUrl": {
+      "type": "string"
+    },
+    "techField": {
+      "type": "enumeration",
+      "enum": [
+        "web",
+        "graphics",
+        "motion",
+        "strategy"
+      ],
+      "required": true
+    },
+    "techStuck": {
+      "type": "string"
+    }
+  }
+}

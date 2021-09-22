@@ -323,7 +323,58 @@
           "id": {
             "type": "string"
           },
-          "heroText": {
+          "infoTitle": {
+            "type": "string"
+          },
+          "infoText": {
+            "type": "string"
+          },
+          "infoButtonFront": {
+            "type": "string"
+          },
+          "infoButtonBack": {
+            "type": "string"
+          },
+          "infoLegalText": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "techField"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "techField": {
+                  "type": "string",
+                  "enum": [
+                    "web",
+                    "graphics",
+                    "motion",
+                    "strategy"
+                  ]
+                },
+                "techStuck": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "infoName": {
             "type": "string"
           },
           "localizations": {
@@ -336,7 +387,25 @@
                 "id": {
                   "type": "string"
                 },
-                "heroText": {
+                "infoTitle": {
+                  "type": "string"
+                },
+                "infoText": {
+                  "type": "string"
+                },
+                "infoButtonFront": {
+                  "type": "string"
+                },
+                "infoButtonBack": {
+                  "type": "string"
+                },
+                "infoLegalText": {
+                  "type": "string"
+                },
+                "technologies": {
+                  "type": "component"
+                },
+                "infoName": {
                   "type": "string"
                 },
                 "localizations": {
@@ -371,7 +440,58 @@
       },
       "NewPrint-shop-landing-page": {
         "properties": {
-          "heroText": {
+          "infoTitle": {
+            "type": "string"
+          },
+          "infoText": {
+            "type": "string"
+          },
+          "infoButtonFront": {
+            "type": "string"
+          },
+          "infoButtonBack": {
+            "type": "string"
+          },
+          "infoLegalText": {
+            "type": "string"
+          },
+          "technologies": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "id",
+                "techField"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "name": {
+                  "type": "string"
+                },
+                "description": {
+                  "type": "string"
+                },
+                "iconUrl": {
+                  "type": "string"
+                },
+                "techField": {
+                  "type": "string",
+                  "enum": [
+                    "web",
+                    "graphics",
+                    "motion",
+                    "strategy"
+                  ]
+                },
+                "techStuck": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "infoName": {
             "type": "string"
           },
           "localizations": {

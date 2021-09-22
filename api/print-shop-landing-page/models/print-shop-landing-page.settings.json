@@ -1,8 +1,9 @@
 {
   "kind": "singleType",
-  "collectionName": "print_shop_landing_pages",
+  "collectionName": "pageIndexs",
   "info": {
-    "name": "Print Shop Landing Page"
+    "name": "pageIndex",
+    "description": ""
   },
   "options": {
     "increments": true,
@@ -15,13 +16,63 @@
     }
   },
   "attributes": {
-    "heroText": {
+    "infoTitle": {
       "pluginOptions": {
         "i18n": {
           "localized": true
         }
       },
-      "type": "richtext"
+      "type": "string"
+    },
+    "infoText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "text"
+    },
+    "infoButtonFront": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "infoButtonBack": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "infoLegalText": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
+    },
+    "technologies": {
+      "type": "component",
+      "repeatable": true,
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "component": "skills.technology"
+    },
+    "infoName": {
+      "pluginOptions": {
+        "i18n": {
+          "localized": true
+        }
+      },
+      "type": "string"
     }
   }
 }
