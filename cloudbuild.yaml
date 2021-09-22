@@ -2,15 +2,3 @@ steps:
 - name: "gcr.io/cloud-builders/gcloud"
   args: ["app", "deploy"]
 timeout: "5600s"
-env_variables:
-  # HOST: '0.0.0.0'
-  NODE_ENV: 'production'
-  DATABASE_HOST: 'cluster0-shard-00-01-hxdra.mongodb.net'
-  DATABASE_SRV: false
-  DATABASE_PORT: 27017
-  DATABASE_NAME: 'strapi'
-  DATABASE_USERNAME: 'strapi'
-  DATABASE_PASSWORD: 'Zolototo'
-  CLOUDINARY_NAME: 'fulliron'
-  CLOUDINARY_KEY: '154768473484141'
-  CLOUDINARY_SECRET: 'QFQCms2epeYTdu8WPjgaTbnrGMU'
