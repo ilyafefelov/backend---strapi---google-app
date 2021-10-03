@@ -1,0 +1,44 @@
+{
+  "collectionName": "components_item_projects",
+  "info": {
+    "name": "Project",
+    "icon": "briefcase",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "ProjectGoal": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project-goal"
+    },
+    "ProjectSolution": {
+      "type": "component",
+      "repeatable": true,
+      "component": "project.project-solution"
+    },
+    "ProjectClient": {
+      "type": "component",
+      "repeatable": false,
+      "component": "project.project-client"
+    },
+    "featuredMedia": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "title": {
+      "type": "string"
+    },
+    "description": {
+      "type": "richtext"
+    }
+  }
+}

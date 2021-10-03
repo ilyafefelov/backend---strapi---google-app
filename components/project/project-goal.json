@@ -1,0 +1,16 @@
+{
+  "collectionName": "components_project_project_goals",
+  "info": {
+    "name": "ProjectGoal",
+    "icon": "bullseye"
+  },
+  "options": {},
+  "attributes": {
+    "problem": {
+      "type": "string"
+    },
+    "analysis": {
+      "type": "richtext"
+    }
+  }
+}

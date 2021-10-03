@@ -1,0 +1,33 @@
+{
+  "collectionName": "components_project_project_clients",
+  "info": {
+    "name": "ProjectClient",
+    "icon": "address-book"
+  },
+  "options": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "logo": {
+      "model": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    },
+    "website": {
+      "type": "string"
+    },
+    "skills": {
+      "type": "component",
+      "repeatable": true,
+      "component": "skills.technology"
+    }
+  }
+}

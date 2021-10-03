@@ -1,0 +1,25 @@
+{
+  "collectionName": "components_project_project_solutions",
+  "info": {
+    "name": "ProjectSolution",
+    "icon": "award"
+  },
+  "options": {},
+  "attributes": {
+    "text": {
+      "type": "richtext"
+    },
+    "media": {
+      "collection": "file",
+      "via": "related",
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos"
+      ],
+      "plugin": "upload",
+      "required": false,
+      "pluginOptions": {}
+    }
+  }
+}

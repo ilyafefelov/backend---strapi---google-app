@@ -1,0 +1,24 @@
+{
+  "kind": "collectionType",
+  "collectionName": "projects",
+  "info": {
+    "name": "projects",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "Project": {
+      "type": "component",
+      "repeatable": false,
+      "component": "item.project"
+    },
+    "title": {
+      "type": "string"
+    }
+  }
+}
