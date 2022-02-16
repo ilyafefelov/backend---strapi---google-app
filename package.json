@@ -11,11 +11,10 @@
     "gcp-build": "strapi build"
   },
   "dependencies": {
-    "axios": "^0.22.0",
-    "knex": "<0.95.11",
+    "axios": "^0.23.0",
+    "knex": "<0.22.00",
     "strapi": "3.6.8",
     "strapi-admin": "3.6.8",
-    "strapi-connector-bookshelf": "3.6.8",
     "strapi-connector-mongoose": "3.6.8",
     "strapi-plugin-content-manager": "3.6.8",
     "strapi-plugin-content-type-builder": "3.6.8",
@@ -25,6 +24,8 @@
     "strapi-plugin-i18n": "3.6.8",
     "strapi-plugin-upload": "3.6.8",
     "strapi-plugin-users-permissions": "3.6.8",
+    "strapi-provider-email-nodemailer": "^3.6.8",
+    "strapi-provider-email-sendmail": "^3.6.8",
     "strapi-provider-upload-cloudinary": "^3.6.8",
     "strapi-utils": "3.6.8"
   },

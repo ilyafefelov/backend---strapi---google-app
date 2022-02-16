@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/tetis-jobs",
+      "handler": "tetis-jobs.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tetis-jobs/count",
+      "handler": "tetis-jobs.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/tetis-jobs/:id",
+      "handler": "tetis-jobs.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/tetis-jobs",
+      "handler": "tetis-jobs.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/tetis-jobs/:id",
+      "handler": "tetis-jobs.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/tetis-jobs/:id",
+      "handler": "tetis-jobs.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
