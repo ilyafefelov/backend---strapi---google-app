@@ -1,0 +1,52 @@
+services:
+  - type: web
+    name: strapi
+    env: node
+    plan: free
+    buildCommand: yarn install && yarn build
+    startCommand: yarn start
+    healthCheckPath: /_health
+    envVars:
+      - key: NODE_VERSION
+        value: ~16.13.0
+      - key: NODE_ENV
+        value: production
+      - key: CLOUDINARY_NAME
+        sync: false
+      - key: CLOUDINARY_KEY
+        sync: false
+      - key: CLOUDINARY_SECRET
+        sync: false
+      - key: DATABASE_URL
+        sync: false
+      - key: NODE_ENV: 'production'
+        sync: false
+      - key: DATABASE_HOST
+        sync: false
+      - key: DATABASE_SRV
+        sync: false
+      - key: DATABASE_PORT
+        sync: false
+      - key: DATABASE_NAME
+        sync: false
+      - key: DATABASE_USERNAME
+        sync: false
+      - key: DATABASE_PASSWORD
+        sync: false
+      #   fromDatabase:
+      #     name: strapi
+      #     property: connectionString
+      - key: JWT_SECRET
+        # sync: false
+        generateValue: true
+      - key: ADMIN_JWT_SECRET
+        # sync: false
+        generateValue: true
+      - key: APP_KEYS
+        generateValue: true
+        # sync: false
+
+# databases:
+#   - name: strapi
+#     # plan: starter
+#     plan: free
