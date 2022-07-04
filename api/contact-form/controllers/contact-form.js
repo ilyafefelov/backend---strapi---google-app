@@ -1,32 +1,26 @@
-const {
-  parseMultipartData,
-  sanitizeEntity
-} = require('strapi-utils');
+const { parseMultipartData, sanitizeEntity } = require("strapi-utils");
 
 module.exports = {
   async create(ctx) {
     let entity;
     console.log("ctx:", ctx);
     // return await strapi.services
-    if (ctx.is('multipart')) {
-      const {
-        data,
-        files
-      } = parseMultipartData(ctx);
+    if (ctx.is("multipart")) {
+      const { data, files } = parseMultipartData(ctx);
       entity = await strapi.services["contact-form"].create(data, {
-        files
+        files,
       });
     } else {
       entity = await strapi.services["contact-form"].create(ctx.request.body);
     }
     entity = await sanitizeEntity(entity, {
-      model: strapi.models["contact-form"]
+      model: strapi.models["contact-form"],
     });
 
     await strapi.plugins["email"].services.email
       .send({
-        to: "fefelov@full-iron.online",
-        from: "fefelov@full-iron.online",
+        to: "illya@full-iron.online",
+        from: "illya@full-iron.online",
         subject: "Contact form posted",
         // TODO: repond to
         text: `
@@ -67,6 +61,6 @@ module.exports = {
       })
       .then(console.log("email sent. data"));
 
-    return entity
+    return entity;
   },
 };
