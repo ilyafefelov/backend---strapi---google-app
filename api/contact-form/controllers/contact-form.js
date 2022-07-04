@@ -19,8 +19,8 @@ module.exports = {
 
     await strapi.plugins["email"].services.email
       .send({
-        to: "illya@full-iron.online",
-        from: "illya@full-iron.online",
+        to: "fefelov@full-iron.online",
+        from: "fefelov@full-iron.online",
         subject: "Contact form posted",
         // TODO: repond to
         text: `
