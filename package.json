@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "axios": "^0.23.0",
-    "knex": "<0.22.00",
+    "knex": "<2.5.0",
     "strapi": "3.6.10",
     "strapi-admin": "3.6.10",
     "strapi-connector-mongoose": "3.6.10",
